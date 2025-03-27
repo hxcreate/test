@@ -1,28 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { BlogList } from './components/BlogList';
-import { BlogPostDetail } from './components/BlogPostDetail';
+import React from 'react';
 
-function App() {
+// 调试组件
+import Preview from './components/Preview';
+
+export default function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-100">
-        <header className="bg-white shadow-sm">
-          <div className="max-w-3xl mx-auto py-4">
-            <a href="/" className="text-2xl font-bold text-gray-800">
-              My Blog
-            </a>
-          </div>
-        </header>
-
-        <main>
-          <Routes>
-            <Route path="/" element={<BlogList />} />
-            <Route path="/post/:id" element={<BlogPostDetail />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <>
+      <Preview />
+    </>
   );
 }
-
-export default App;
